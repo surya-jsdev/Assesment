@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(208, 176, 70, 0.345);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 400px;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+label {
+    display: block;
+    padding: 20px 0 0 10px;
+}
+
+input {
+    margin: 20px 0 0 10px;
+    padding: 10px;
+
+}
+
+button {
+    display: block;
+    margin: 10px 0 0 10px;
+    padding: 10px;
+    background-color: rgb(5, 93, 188);
+    color: white;
+    border: none;
+}
+
+.Success {
+    display: none;
+    text-align: center;
+    color: green;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.errorbox {
+    display: none;
+    text-align: center;
+    color: rgb(255, 0, 0);
+    padding: 10px;
+    font-size: 20px;
+}
+a{
+    padding: 10px;
+    text-decoration: none;
+    color:black
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main~p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container" id="loadcontainer">
+        <button id="getimg">Get</button>
+    </div> -->
+
+    <div class="main">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <span>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </span>
+
+    </div>
+    <script>
+        const url = "https://68a582352a3deed2960dbd2c.mockapi.io/form/name";
+
+        const loadcontainer = document.getElementById("loadcontainer");
+        const getimg = document.getElementById("getimg");
+
+        getimg.addEventListener("click", async function fetchdata() {
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+
+                loadcontainer.innerHTML = data
+                    .map(item => `<img src="${item.image}" alt="image" width="120">
+                    `)
+                    .join("");
+
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                loadcontainer.innerHTML = "<p>Failed to load images.</p>";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
